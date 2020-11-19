@@ -10,13 +10,13 @@
         <!--Root View Controller-->
         <scene sceneID="5bJ-nx-TU7">
             <objects>
-                <tableViewController id="1hU-v2-irf" sceneMemberID="viewController">
+                <tableViewController id="1hU-v2-irf" customClass="TripsVIewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="h5F-XP-g41">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="JaQ-qh-2YB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tripCell" id="JaQ-qh-2YB">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JaQ-qh-2YB" id="XgR-WI-61Q">
@@ -25,14 +25,17 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="1hU-v2-irf" id="Vl2-P4-Sar"/>
-                            <outlet property="delegate" destination="1hU-v2-irf" id="BaQ-ic-vgh"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="JeJ-mj-cMF">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="o7Q-h6-gkT"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="o7Q-h6-gkT">
+                            <connections>
+                                <action selector="addTrip:" destination="1hU-v2-irf" id="8xC-LQ-kVL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tripsTV" destination="h5F-XP-g41" id="KxK-rJ-Wxe"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XrL-I3-tNu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
