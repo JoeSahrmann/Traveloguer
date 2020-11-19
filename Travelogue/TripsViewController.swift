@@ -11,8 +11,8 @@ class TripsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     //the CD
     var tripz = [Trip]()
     //the SB/IB
-   
     @IBOutlet var tripsTV: UITableView!
+   
     //the basics
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +29,9 @@ class TripsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     //To add more trips
+   
     @IBAction func addTrip(_ sender: Any) {
-    
-    
+   
         let alert = UIAlertController(title: "Add Trip", message: "Enter new location!", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Submit", style: UIAlertAction.Style.default, handler: {

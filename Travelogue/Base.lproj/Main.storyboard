@@ -10,7 +10,7 @@
         <!--Root View Controller-->
         <scene sceneID="5bJ-nx-TU7">
             <objects>
-                <tableViewController id="1hU-v2-irf" customClass="TripsVIewController" sceneMemberID="viewController">
+                <tableViewController id="1hU-v2-irf" customClass="TripsVIewController" customModule="Travelogue" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="h5F-XP-g41">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,12 +29,12 @@
                     <navigationItem key="navigationItem" title="Root View Controller" id="JeJ-mj-cMF">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="o7Q-h6-gkT">
                             <connections>
-                                <action selector="addTrip:" destination="1hU-v2-irf" id="8xC-LQ-kVL"/>
+                                <action selector="addTrip:" destination="1hU-v2-irf" id="Igr-3H-SvP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tripsTV" destination="h5F-XP-g41" id="KxK-rJ-Wxe"/>
+                        <outlet property="tripsTV" destination="h5F-XP-g41" id="2t7-mS-vmW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XrL-I3-tNu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -50,7 +50,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="1hU-v2-irf" kind="relationship" relationship="rootViewController" id="uIO-r1-v0v"/>
+                        <segue destination="1hU-v2-irf" kind="relationship" relationship="rootViewController" id="KVo-6I-Njt"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jXz-HM-UpI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
