@@ -16,6 +16,14 @@
 		6E5A9018256603D1006B7A4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E5A9016256603D1006B7A4C /* LaunchScreen.storyboard */; };
 		6E5A9023256603D2006B7A4C /* TravelogueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A9022256603D2006B7A4C /* TravelogueTests.swift */; };
 		6E5A902E256603D2006B7A4C /* TravelogueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A902D256603D2006B7A4C /* TravelogueUITests.swift */; };
+		6E5A906225662156006B7A4C /* Trip+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A905E25662156006B7A4C /* Trip+CoreDataClass.swift */; };
+		6E5A906325662156006B7A4C /* Trip+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A905F25662156006B7A4C /* Trip+CoreDataProperties.swift */; };
+		6E5A906425662156006B7A4C /* Stop+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A906025662156006B7A4C /* Stop+CoreDataClass.swift */; };
+		6E5A906525662156006B7A4C /* Stop+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A906125662156006B7A4C /* Stop+CoreDataProperties.swift */; };
+		6E5A906D256623F2006B7A4C /* StopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A906C256623F2006B7A4C /* StopsViewController.swift */; };
+		6E5A907225662400006B7A4C /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A907125662400006B7A4C /* TripsViewController.swift */; };
+		6E5A907725662427006B7A4C /* StopDetailzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A907625662427006B7A4C /* StopDetailzViewController.swift */; };
+		6E5A907C25662442006B7A4C /* StopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A907B25662442006B7A4C /* StopTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,14 @@
 		6E5A9029256603D2006B7A4C /* TravelogueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelogueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E5A902D256603D2006B7A4C /* TravelogueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelogueUITests.swift; sourceTree = "<group>"; };
 		6E5A902F256603D2006B7A4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E5A905E25662156006B7A4C /* Trip+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6E5A905F25662156006B7A4C /* Trip+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trip+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6E5A906025662156006B7A4C /* Stop+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stop+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6E5A906125662156006B7A4C /* Stop+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stop+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6E5A906C256623F2006B7A4C /* StopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopsViewController.swift; sourceTree = "<group>"; };
+		6E5A907125662400006B7A4C /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
+		6E5A907625662427006B7A4C /* StopDetailzViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopDetailzViewController.swift; sourceTree = "<group>"; };
+		6E5A907B25662442006B7A4C /* StopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +117,10 @@
 		6E5A9007256603CF006B7A4C /* Travelogue */ = {
 			isa = PBXGroup;
 			children = (
+				6E5A905E25662156006B7A4C /* Trip+CoreDataClass.swift */,
+				6E5A905F25662156006B7A4C /* Trip+CoreDataProperties.swift */,
+				6E5A906025662156006B7A4C /* Stop+CoreDataClass.swift */,
+				6E5A906125662156006B7A4C /* Stop+CoreDataProperties.swift */,
 				6E5A9008256603CF006B7A4C /* AppDelegate.swift */,
 				6E5A900A256603CF006B7A4C /* SceneDelegate.swift */,
 				6E5A900C256603CF006B7A4C /* ViewController.swift */,
@@ -109,6 +129,10 @@
 				6E5A9016256603D1006B7A4C /* LaunchScreen.storyboard */,
 				6E5A9019256603D1006B7A4C /* Info.plist */,
 				6E5A9011256603CF006B7A4C /* Travelogue.xcdatamodeld */,
+				6E5A906C256623F2006B7A4C /* StopsViewController.swift */,
+				6E5A907125662400006B7A4C /* TripsViewController.swift */,
+				6E5A907625662427006B7A4C /* StopDetailzViewController.swift */,
+				6E5A907B25662442006B7A4C /* StopTableViewCell.swift */,
 			);
 			path = Travelogue;
 			sourceTree = "<group>";
@@ -261,10 +285,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E5A906325662156006B7A4C /* Trip+CoreDataProperties.swift in Sources */,
+				6E5A906525662156006B7A4C /* Stop+CoreDataProperties.swift in Sources */,
 				6E5A900D256603CF006B7A4C /* ViewController.swift in Sources */,
 				6E5A9013256603CF006B7A4C /* Travelogue.xcdatamodeld in Sources */,
+				6E5A906425662156006B7A4C /* Stop+CoreDataClass.swift in Sources */,
 				6E5A9009256603CF006B7A4C /* AppDelegate.swift in Sources */,
+				6E5A907725662427006B7A4C /* StopDetailzViewController.swift in Sources */,
+				6E5A907C25662442006B7A4C /* StopTableViewCell.swift in Sources */,
 				6E5A900B256603CF006B7A4C /* SceneDelegate.swift in Sources */,
+				6E5A906D256623F2006B7A4C /* StopsViewController.swift in Sources */,
+				6E5A906225662156006B7A4C /* Trip+CoreDataClass.swift in Sources */,
+				6E5A907225662400006B7A4C /* TripsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
