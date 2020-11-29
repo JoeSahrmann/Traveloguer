@@ -107,12 +107,32 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VUW-bg-VAA">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cyD-8Z-MCU"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cyD-8Z-MCU">
+                            <connections>
+                                <segue destination="Sp3-2D-wle" kind="show" id="tGG-fZ-DwD"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1U9-kO-mNP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="70" y="-216"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6er-P6-x9P">
+            <objects>
+                <viewController id="Sp3-2D-wle" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3sV-36-nwG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="mmv-BR-biY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qm3-M8-JdS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SD2-Jd-pD8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="-216"/>
         </scene>
     </scenes>
     <resources>
