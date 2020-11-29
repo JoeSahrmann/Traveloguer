@@ -11,14 +11,31 @@ class TripsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     //the CD
     var tripz = [Trip]()
     //the SB/IB
-   
+
     @IBOutlet weak var tripsTV: UITableView!
+    var threeDots = UIImage(systemName: "ellipsis.circle.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .regular))?.withTintColor(.cyan, renderingMode: .alwaysOriginal)
+    var deleteImage = UIImage(systemName: "x.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .regular))?.withTintColor(.systemRed, renderingMode: .alwaysOriginal)
+    var editImage = UIImage(systemName: "circle", withConfiguration: UIImage.SymbolConfiguration(weight: .bold))?.withTintColor(.systemPink, renderingMode: .alwaysOriginal)
+    func even(_ number: Int) -> Bool{
+        return number % 2 == 0
+    }
+//    didSet {
+//            // Make it card-like
+//            cardView.layer.cornerRadius = 10
+//            cardView.layer.shadowOpacity = 1
+//            cardView.layer.shadowRadius = 2
+//            cardView.layer.shadowColor = UIColor(named: "Orange")?.cgColor
+//            cardView.layer.shadowOffset = CGSize(width: 3, height: 3)
+//            cardView.backgroundColor = UIColor(named: "Red")
+//        }
+//    }
     
     //the basics
     override func viewDidLoad() {
         super.viewDidLoad()
         tripsTV.delegate = self
         tripsTV.dataSource = self
+        navigationController?.navigationBar.prefersLargeTitles = true
         title = "Travel"
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -196,6 +213,9 @@ class TripsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
+
+
+    
     func deleteTrip(at indexPath: IndexPath) {
         let trip = tripz[indexPath.row]
         
@@ -238,39 +258,60 @@ class TripsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tripCell", for: indexPath)
-        
-        let trip = tripz[indexPath.row]
-        cell.textLabel?.text = trip.name
-        
+//
+//
+//        DispatchQueue.main.async
+//            {
+//                cell.favPic.layer.cornerRadius = 10.0;
+//                cell.tripTitle.roundCorners([.topRight, .bottomRight], radius: 10)
+//            cell.tripTitle.backgroundColor = UIColor.black
+//            cell.favPic.backgroundColor = UIColor.red
+//            }
+        if let cell = cell as? TripsTableViewCell {
+            let trip = tripz[indexPath.row]
+            cell.tripTitle.text = trip.name
+            cell.favPic.layer.cornerRadius = 10.0;
+//            cell.tripTitle.cor([.topRight, .bottomRight,.bottomLeft, .bottomRight], radius: 10)
+//            cell.tripTitle.backgroundColor = UIColor.black
+            cell.tripTitle.UILableTextShadow(color: UIColor.black)
+            cell.favPic.backgroundColor = UIColor.red
+            cell.tripTitle.layer.masksToBounds = true
+            cell.favPic.layer.masksToBounds = true
+//            cell.tripTitle.isHidden = true
+        }
+        //style me please
+//        cell.contentView.backgroundColor=mint
+//        cell.contentView.tintColor=mintText
+       // cell.backgroundView
         return cell
     }
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let action = UIContextualAction(style: .normal, title: "Delete/Edit") { (action, view, completion) in
-            //this is where the action sheet controler is created to pop either delet or edit
-            let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-            //first action is added eddit
-            alert.addAction(UIAlertAction(title: "Edit", style: .default) { (action) in
-               //this should take you to the screen to edit the title
-                self.editTrip(at: indexPath)
-                
-                
-            })
-            //this adds the delet action
-            alert.addAction(UIAlertAction(title: "Delete", style: .destructive) { (action) in
-                
-                self.confirmDeleteTrip(at: indexPath)
-            })
-
-            // This sets up the alert to show next to the button
-            alert.popoverPresentationController?.sourceView = view
-            alert.popoverPresentationController?.sourceRect = view.bounds
-
-            self.present(alert, animated: true, completion: nil)
-                    }
-
-        return UISwipeActionsConfiguration(actions: [action])
-    }
-    
+//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//        let action = UIContextualAction(style: .normal, title: "Delete/Edit") { (action, view, completion) in
+//            //this is where the action sheet controler is created to pop either delet or edit
+//            let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+//            //first action is added eddit
+//            alert.addAction(UIAlertAction(title: "Edit", style: .default) { (action) in
+//               //this should take you to the screen to edit the title
+//                self.editTrip(at: indexPath)
+//
+//
+//            })
+//            //this adds the delet action
+//            alert.addAction(UIAlertAction(title: "Delete", style: .destructive) { (action) in
+//
+//                self.confirmDeleteTrip(at: indexPath)
+//            })
+//
+//            // This sets up the alert to show next to the button
+//            alert.popoverPresentationController?.sourceView = view
+//            alert.popoverPresentationController?.sourceRect = view.bounds
+//
+//            self.present(alert, animated: true, completion: nil)
+//                    }
+//
+//        return UISwipeActionsConfiguration(actions: [action])
+//    }
+//
 //    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UIContextualAction]? {
 //        let delete = UIContextualAction(style: .destructive, title: "Delete") {
 //            action, index,<#arg#>  in
@@ -287,3 +328,4 @@ class TripsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //    }
 
 }
+

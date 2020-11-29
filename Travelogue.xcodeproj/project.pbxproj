@@ -25,6 +25,7 @@
 		6E5A907725662427006B7A4C /* StopDetailzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A907625662427006B7A4C /* StopDetailzViewController.swift */; };
 		6E5A907C25662442006B7A4C /* StopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A907B25662442006B7A4C /* StopTableViewCell.swift */; };
 		6EA2C80B257434EC0008F67D /* AddStopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2C80A257434EC0008F67D /* AddStopsViewController.swift */; };
+		6EA2C81525744E8A0008F67D /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2C81425744E8A0008F67D /* TripsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		6E5A907625662427006B7A4C /* StopDetailzViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopDetailzViewController.swift; sourceTree = "<group>"; };
 		6E5A907B25662442006B7A4C /* StopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTableViewCell.swift; sourceTree = "<group>"; };
 		6EA2C80A257434EC0008F67D /* AddStopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStopsViewController.swift; sourceTree = "<group>"; };
+		6EA2C81425744E8A0008F67D /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				6E5A9011256603CF006B7A4C /* Travelogue.xcdatamodeld */,
 				6E5A906C256623F2006B7A4C /* StopsViewController.swift */,
 				6E5A907125662400006B7A4C /* TripsViewController.swift */,
+				6EA2C81425744E8A0008F67D /* TripsTableViewCell.swift */,
 				6E5A907625662427006B7A4C /* StopDetailzViewController.swift */,
 				6E5A907B25662442006B7A4C /* StopTableViewCell.swift */,
 				6EA2C80A257434EC0008F67D /* AddStopsViewController.swift */,
@@ -300,6 +303,7 @@
 				6E5A906D256623F2006B7A4C /* StopsViewController.swift in Sources */,
 				6E5A906225662156006B7A4C /* Trip+CoreDataClass.swift in Sources */,
 				6EA2C80B257434EC0008F67D /* AddStopsViewController.swift in Sources */,
+				6EA2C81525744E8A0008F67D /* TripsTableViewCell.swift in Sources */,
 				6E5A907225662400006B7A4C /* TripsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BRYAB668WR;
 				INFOPLIST_FILE = Travelogue/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -498,6 +503,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BRYAB668WR;
 				INFOPLIST_FILE = Travelogue/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
