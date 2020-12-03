@@ -9,10 +9,14 @@ import UIKit
 
 class StopsViewController: UIViewController {
 
+    @IBOutlet weak var stopsTV: UITableView!
+    @IBOutlet weak var tripImg: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    @IBAction func edit(_ sender: Any) {
     }
     
 

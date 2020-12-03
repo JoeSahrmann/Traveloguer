@@ -17,6 +17,7 @@ extension Trip {
     }
 
     @NSManaged public var name: String?
+    @NSManaged public var coverPhoto: Data?
     @NSManaged public var stops: NSSet?
 
 }

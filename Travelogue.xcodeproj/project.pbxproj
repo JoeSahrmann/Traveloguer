@@ -26,6 +26,7 @@
 		6E5A907C25662442006B7A4C /* StopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A907B25662442006B7A4C /* StopTableViewCell.swift */; };
 		6EA2C80B257434EC0008F67D /* AddStopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2C80A257434EC0008F67D /* AddStopsViewController.swift */; };
 		6EA2C81525744E8A0008F67D /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2C81425744E8A0008F67D /* TripsTableViewCell.swift */; };
+		6EA2C81D25748BC70008F67D /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2C81C25748BC70008F67D /* AddTripViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		6E5A907B25662442006B7A4C /* StopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTableViewCell.swift; sourceTree = "<group>"; };
 		6EA2C80A257434EC0008F67D /* AddStopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStopsViewController.swift; sourceTree = "<group>"; };
 		6EA2C81425744E8A0008F67D /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
+		6EA2C81C25748BC70008F67D /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				6E5A907625662427006B7A4C /* StopDetailzViewController.swift */,
 				6E5A907B25662442006B7A4C /* StopTableViewCell.swift */,
 				6EA2C80A257434EC0008F67D /* AddStopsViewController.swift */,
+				6EA2C81C25748BC70008F67D /* AddTripViewController.swift */,
 			);
 			path = Travelogue;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				6E5A900D256603CF006B7A4C /* ViewController.swift in Sources */,
 				6E5A9013256603CF006B7A4C /* Travelogue.xcdatamodeld in Sources */,
 				6E5A906425662156006B7A4C /* Stop+CoreDataClass.swift in Sources */,
+				6EA2C81D25748BC70008F67D /* AddTripViewController.swift in Sources */,
 				6E5A9009256603CF006B7A4C /* AppDelegate.swift in Sources */,
 				6E5A907725662427006B7A4C /* StopDetailzViewController.swift in Sources */,
 				6E5A907C25662442006B7A4C /* StopTableViewCell.swift in Sources */,

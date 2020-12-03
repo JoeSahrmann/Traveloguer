@@ -12,6 +12,8 @@ class TripsTableViewCell: UITableViewCell {
     @IBOutlet weak var favPic: UIImageView!
     
     @IBOutlet weak var tripTitle: UILabel!
+//    @IBOutlet weak var stopTitle: UILabel!
+//    @IBOutlet weak var stopPic: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

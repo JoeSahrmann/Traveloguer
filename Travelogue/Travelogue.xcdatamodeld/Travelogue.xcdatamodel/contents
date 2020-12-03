@@ -7,11 +7,12 @@
         <relationship name="trip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="stops" inverseEntity="Trip"/>
     </entity>
     <entity name="Trip" representedClassName="Trip" syncable="YES">
+        <attribute name="coverPhoto" optional="YES" attributeType="Binary"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="stops" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Stop" inverseName="trip" inverseEntity="Stop"/>
     </entity>
     <elements>
-        <element name="Trip" positionX="-63" positionY="-18" width="128" height="73"/>
         <element name="Stop" positionX="-54" positionY="-9" width="128" height="103"/>
+        <element name="Trip" positionX="-63" positionY="-18" width="128" height="88"/>
     </elements>
 </model>
