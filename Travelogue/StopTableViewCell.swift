@@ -9,6 +9,9 @@ import UIKit
 
 class StopTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var stopPic: UIImageView!
+    @IBOutlet weak var stopTitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,3 +24,4 @@ class StopTableViewCell: UITableViewCell {
     }
 
 }
+

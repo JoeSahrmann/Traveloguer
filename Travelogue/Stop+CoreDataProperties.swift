@@ -19,7 +19,9 @@ extension Stop {
     @NSManaged public var title: String?
     @NSManaged public var date: Date?
     @NSManaged public var caption: String?
+    @NSManaged public var pic: Data?
     @NSManaged public var trip: Trip?
+    
 
 }
 

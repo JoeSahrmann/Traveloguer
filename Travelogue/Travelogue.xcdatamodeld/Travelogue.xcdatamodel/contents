@@ -3,6 +3,7 @@
     <entity name="Stop" representedClassName="Stop" syncable="YES">
         <attribute name="caption" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="pic" optional="YES" attributeType="Binary"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="trip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Trip" inverseName="stops" inverseEntity="Trip"/>
     </entity>
@@ -12,7 +13,7 @@
         <relationship name="stops" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Stop" inverseName="trip" inverseEntity="Stop"/>
     </entity>
     <elements>
-        <element name="Stop" positionX="-54" positionY="-9" width="128" height="103"/>
+        <element name="Stop" positionX="-54" positionY="-9" width="128" height="118"/>
         <element name="Trip" positionX="-63" positionY="-18" width="128" height="88"/>
     </elements>
 </model>

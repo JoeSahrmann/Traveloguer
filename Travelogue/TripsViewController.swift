@@ -310,7 +310,7 @@ class TripsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cell.favPic.layer.cornerRadius = 10.0;
             cell.tripTitle.UILableTextShadow(color: UIColor.black)
             let arr = Trip.shareInstance.fetchImage()
-            cell.favPic.image = UIImage(data: arr[indexPath.row].coverPhoto!)
+            cell.favPic.image = UIImage(data: (arr[indexPath.row].coverPhoto!))
             cell.tripTitle.layer.masksToBounds = true
             cell.favPic.layer.masksToBounds = true
         }
@@ -403,15 +403,15 @@ func openPhotoLibrary() {
 
            print("did cancel")
        }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//            if segue.identifier == "addTrip" {
-//                if let destination = segue.destination as? AddTripViewController,
-//                    let row = tripsTV.indexPathForSelectedRow?.row {
-//                    destination.trip = tripz[row]
-//                    destination.index = row
-//                }
-//            }
-//
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "stopSW" {
+                if let destination = segue.destination as? StopsViewController,
+                    let row = tripsTV.indexPathForSelectedRow?.row {
+                    destination.trip = tripz[row]
+                    destination.index = row
+                }
+            }
+
+    }
 }
 
