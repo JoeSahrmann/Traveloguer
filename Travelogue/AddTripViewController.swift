@@ -34,7 +34,10 @@ class AddTripViewController: UIViewController,UIImagePickerControllerDelegate , 
         openPhotoLibrary()
     }
     
-  
+    @IBAction func changeTitle(_ sender: Any) {
+        title = locationTitle.text
+    }
+    
     
    
     @IBAction func Save(_ sender: Any) {

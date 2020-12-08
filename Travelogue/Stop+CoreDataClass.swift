@@ -40,6 +40,7 @@ public class Stop: NSManagedObject {
     }
 
     
+    
     convenience init?(title: String?, date: Date?, caption: String?, pic: Data?, trip: Trip) {
         let appDelegate = UIApplication.shared.delegate as? AppDelegate  //UIKit is needed to access UIApplication
         guard let managedContext = appDelegate?.persistentContainer.viewContext,
@@ -49,18 +50,20 @@ public class Stop: NSManagedObject {
         self.init(entity: Stop.entity(), insertInto: managedContext)
         self.title = title
         self.caption = caption
-        self.date = Date()//make this a date picker
+        self.date = date//make this a date picker
         self.pic = pic
         //self.modifiedDate = Date(timeIntervalSinceNow: 0)
         self.trip = trip
     }
     
-    func update(title: String, caption: String?, pic: Data?, trip: Trip) {
+    func update(title: String?, date: Date?, caption: String?, pic: Data?, trip: Trip) {
         self.title = title
         self.caption = caption
         self.pic = pic
+        self.date = date
         //put date picker in here later
        // self.modifiedDate = Date(timeIntervalSinceNow: 0)
         self.trip = trip
     }
+    
 }

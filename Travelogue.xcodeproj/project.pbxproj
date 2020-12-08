@@ -24,10 +24,6 @@
 		6E5A907225662400006B7A4C /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A907125662400006B7A4C /* TripsViewController.swift */; };
 		6E5A907725662427006B7A4C /* StopDetailzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A907625662427006B7A4C /* StopDetailzViewController.swift */; };
 		6E5A907C25662442006B7A4C /* StopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5A907B25662442006B7A4C /* StopTableViewCell.swift */; };
-		6E88F134257C5F8E001619C7 /* AddStopTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E88F133257C5F8E001619C7 /* AddStopTitleViewController.swift */; };
-		6E88F139257C5FDC001619C7 /* AddStopDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E88F138257C5FDC001619C7 /* AddStopDateViewController.swift */; };
-		6E88F13E257C5FF5001619C7 /* AddStopPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E88F13D257C5FF5001619C7 /* AddStopPhotoViewController.swift */; };
-		6E88F143257C600D001619C7 /* AddStopCaptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E88F142257C600D001619C7 /* AddStopCaptionViewController.swift */; };
 		6EA2C80B257434EC0008F67D /* AddStopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2C80A257434EC0008F67D /* AddStopsViewController.swift */; };
 		6EA2C81525744E8A0008F67D /* TripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2C81425744E8A0008F67D /* TripsTableViewCell.swift */; };
 		6EA2C81D25748BC70008F67D /* AddTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA2C81C25748BC70008F67D /* AddTripViewController.swift */; };
@@ -74,10 +70,6 @@
 		6E5A907125662400006B7A4C /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		6E5A907625662427006B7A4C /* StopDetailzViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopDetailzViewController.swift; sourceTree = "<group>"; };
 		6E5A907B25662442006B7A4C /* StopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopTableViewCell.swift; sourceTree = "<group>"; };
-		6E88F133257C5F8E001619C7 /* AddStopTitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddStopTitleViewController.swift; path = AddStop/AddStopTitleViewController.swift; sourceTree = "<group>"; };
-		6E88F138257C5FDC001619C7 /* AddStopDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddStopDateViewController.swift; path = AddStop/AddStopDateViewController.swift; sourceTree = "<group>"; };
-		6E88F13D257C5FF5001619C7 /* AddStopPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddStopPhotoViewController.swift; path = AddStop/AddStopPhotoViewController.swift; sourceTree = "<group>"; };
-		6E88F142257C600D001619C7 /* AddStopCaptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddStopCaptionViewController.swift; path = AddStop/AddStopCaptionViewController.swift; sourceTree = "<group>"; };
 		6EA2C80A257434EC0008F67D /* AddStopsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStopsViewController.swift; sourceTree = "<group>"; };
 		6EA2C81425744E8A0008F67D /* TripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsTableViewCell.swift; sourceTree = "<group>"; };
 		6EA2C81C25748BC70008F67D /* AddTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTripViewController.swift; sourceTree = "<group>"; };
@@ -143,17 +135,13 @@
 				6E5A9016256603D1006B7A4C /* LaunchScreen.storyboard */,
 				6E5A9019256603D1006B7A4C /* Info.plist */,
 				6E5A9011256603CF006B7A4C /* Travelogue.xcdatamodeld */,
-				6E5A906C256623F2006B7A4C /* StopsViewController.swift */,
 				6E5A907125662400006B7A4C /* TripsViewController.swift */,
 				6EA2C81425744E8A0008F67D /* TripsTableViewCell.swift */,
-				6E5A907625662427006B7A4C /* StopDetailzViewController.swift */,
-				6E5A907B25662442006B7A4C /* StopTableViewCell.swift */,
-				6EA2C80A257434EC0008F67D /* AddStopsViewController.swift */,
 				6EA2C81C25748BC70008F67D /* AddTripViewController.swift */,
-				6E88F133257C5F8E001619C7 /* AddStopTitleViewController.swift */,
-				6E88F138257C5FDC001619C7 /* AddStopDateViewController.swift */,
-				6E88F13D257C5FF5001619C7 /* AddStopPhotoViewController.swift */,
-				6E88F142257C600D001619C7 /* AddStopCaptionViewController.swift */,
+				6E5A906C256623F2006B7A4C /* StopsViewController.swift */,
+				6E5A907B25662442006B7A4C /* StopTableViewCell.swift */,
+				6E5A907625662427006B7A4C /* StopDetailzViewController.swift */,
+				6EA2C80A257434EC0008F67D /* AddStopsViewController.swift */,
 			);
 			path = Travelogue;
 			sourceTree = "<group>";
@@ -310,16 +298,12 @@
 				6E5A906525662156006B7A4C /* Stop+CoreDataProperties.swift in Sources */,
 				6E5A900D256603CF006B7A4C /* ViewController.swift in Sources */,
 				6E5A9013256603CF006B7A4C /* Travelogue.xcdatamodeld in Sources */,
-				6E88F139257C5FDC001619C7 /* AddStopDateViewController.swift in Sources */,
 				6E5A906425662156006B7A4C /* Stop+CoreDataClass.swift in Sources */,
-				6E88F13E257C5FF5001619C7 /* AddStopPhotoViewController.swift in Sources */,
 				6EA2C81D25748BC70008F67D /* AddTripViewController.swift in Sources */,
-				6E88F134257C5F8E001619C7 /* AddStopTitleViewController.swift in Sources */,
 				6E5A9009256603CF006B7A4C /* AppDelegate.swift in Sources */,
 				6E5A907725662427006B7A4C /* StopDetailzViewController.swift in Sources */,
 				6E5A907C25662442006B7A4C /* StopTableViewCell.swift in Sources */,
 				6E5A900B256603CF006B7A4C /* SceneDelegate.swift in Sources */,
-				6E88F143257C600D001619C7 /* AddStopCaptionViewController.swift in Sources */,
 				6E5A906D256623F2006B7A4C /* StopsViewController.swift in Sources */,
 				6E5A906225662156006B7A4C /* Trip+CoreDataClass.swift in Sources */,
 				6EA2C80B257434EC0008F67D /* AddStopsViewController.swift in Sources */,

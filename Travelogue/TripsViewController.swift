@@ -7,31 +7,20 @@
 import CoreData
 import UIKit
 
-class TripsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UIImagePickerControllerDelegate , UINavigationControllerDelegate  {
+class TripsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     //the CD
     var tripz = [Trip]()
-    let ImageVC = UIImagePickerController()
-    var tripCover: Trip?
-    //the SB/IB
-    let coverImage = UIImageView()
+
 
    
  
     @IBOutlet weak var tripsTV: UITableView!
-    var threeDots = UIImage(systemName: "ellipsis.circle.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .regular))?.withTintColor(.cyan, renderingMode: .alwaysOriginal)
-    var deleteImage = UIImage(systemName: "x.fill", withConfiguration: UIImage.SymbolConfiguration(weight: .regular))?.withTintColor(.systemRed, renderingMode: .alwaysOriginal)
-    var editImage = UIImage(systemName: "circle", withConfiguration: UIImage.SymbolConfiguration(weight: .bold))?.withTintColor(.systemPink, renderingMode: .alwaysOriginal)
-    func even(_ number: Int) -> Bool{
-        return number % 2 == 0
-    }
-    var refreshControl = UIRefreshControl()
-    
+
     //the basics
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor(named: "background")
-        tripsTV.delegate = self
-        tripsTV.dataSource = self
+       
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Travel"
 //        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
@@ -267,6 +256,7 @@ class TripsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             do {
                 try managedObjectContext.save()
                 self.tripz.remove(at: indexPath.row)
+                
                 tripsTV.deleteRows(at: [indexPath], with: .automatic)
             } catch {
                 print("Delete failed: \(error).")
@@ -275,9 +265,10 @@ class TripsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    func updateTrip(at indexPath: IndexPath, name: String) {
-        let trip = tripz[indexPath.row]
+    func updateTrip(at indexPath: Int, name: String, img: Data) {
+        let trip = tripz[indexPath]
         trip.name = name
+        trip.coverPhoto = img
         
         if let managedObjectContext = trip.managedObjectContext {
             do {
@@ -285,7 +276,7 @@ class TripsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 fetchTrips(searchString: "")
             } catch {
                 print("Update failed.")
-                tripsTV.reloadData()
+//                tripsTV.reloadData()
             }
         }
     }
@@ -370,39 +361,39 @@ class TripsViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //            }
 //        }
 //    }
-func openPhotoLibrary() {
-    //this is for if the library can't open
- guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
-         action("can't open the photo library")
-         print("can't open photo library")
-         return
-     }
- //this sets the up
- ImageVC.sourceType = .photoLibrary
- ImageVC.delegate = self
- present(ImageVC, animated: true)
- }
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        picker.dismiss(animated: true)
-
-        guard let image = info[.originalImage] as? UIImage else {
-            action("No image found")
-            print("No image found")
-            return
-        }
-    
-        // print out the image size as a test
-        coverImage.image = image
-        //print(image.size)
-    }
-    //this is to handle if the camera function is cancled
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-           defer {
-               picker.dismiss(animated: true)
-           }
-
-           print("did cancel")
-       }
+//func openPhotoLibrary() {
+//    //this is for if the library can't
+// guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else {
+//         action("can't open the photo library")
+//         print("can't open photo library")
+//         return
+//     }
+// //this sets the up
+// ImageVC.sourceType = .photoLibrary
+// ImageVC.delegate = self
+// present(ImageVC, animated: true)
+// }
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        picker.dismiss(animated: true)
+//
+//        guard let image = info[.originalImage] as? UIImage else {
+//            action("No image found")
+//            print("No image found")
+//            return
+//        }
+//
+//        // print out the image size as a test
+//        coverImage.image = image
+//        //print(image.size)
+//    }
+//    //this is to handle if the camera function is cancled
+//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+//           defer {
+//               picker.dismiss(animated: true)
+//           }
+//
+//           print("did cancel")
+//       }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "stopSW" {
                 if let destination = segue.destination as? StopsViewController,
@@ -413,5 +404,6 @@ func openPhotoLibrary() {
             }
 
     }
+    
 }
 
