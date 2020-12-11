@@ -106,13 +106,45 @@ class AddStopsViewController: UIViewController, UIImagePickerControllerDelegate 
        }
 
     @IBAction func saveStop(_ sender: Any) {
-//        if let trip = trip, let stopImg = stopImageView.image?.pngData(){
-//            updateStop(at: index, title: stopCaption.text, date: stopDatePicker.date, caption: stopCaption.text, img: stopImg , trip: trip )
-//
-//        }else{
-//            print("mo")
-//        }
-        stopSaver()
+        guard let name = stoptitleTF.text else {
+            TripsViewController().alertNotifyUser(message: "Stop not saved.\nThe name is not accessible.")
+            return
+        }
+        
+        let stopTitle = name.trimmingCharacters(in: .whitespaces)
+        if (stopTitle == "") {
+            TripsViewController().alertNotifyUser(message: "Stop not saved.\nA name is required.")
+            return
+        }
+        let stopCap = stopCaption.text ?? ""
+        let stopImg = stopImageView.image?.pngData()
+        let stopDate = stopDatePicker.date
+        
+        if stop == nil {
+            // stop doesn't exist, create new one
+            if let trip = trip, let stopImage = stopImg{
+                stop = Stop(title: stopTitle, date: stopDate, caption: stopCap, pic: stopImage, trip: trip)
+            }
+        } else {
+            // stop exists, update existing one
+            if let trip = trip, let stopImage = stopImg {
+                stop?.update(title: stopTitle, date: stopDate, caption: stopCap, pic: stopImage, trip: trip)
+
+            }
+        }
+        if let stop = stop {
+            do {
+                let managedContext = stop.managedObjectContext
+                try managedContext?.save()
+            } catch {
+                TripsViewController().alertNotifyUser(message: "Stop not saved.\nAn error occured saving context.")
+            }
+        } else {
+            TripsViewController().alertNotifyUser(message: "Stop not saved.\nA Stop entity could not be created.")
+        }
+        
+        navigationController?.popViewController(animated: true)
+        
         
     }
     func updateStop(at indexPath: Int, title: String,date: Date, caption: String, img: Data, trip: Trip) {
@@ -139,14 +171,15 @@ class AddStopsViewController: UIViewController, UIImagePickerControllerDelegate 
     }
     func stopSaver(){
         //get title and trim white spaces
+        TripsViewController().alertNotifyUser(message: "help")
         guard let name = stoptitleTF.text else {
-            TripsViewController().alertNotifyUser(message: "Document not saved.\nThe name is not accessible.")
+            TripsViewController().alertNotifyUser(message: "Stop not saved.\nThe name is not accessible.")
             return
         }
         
         let stopTitle = name.trimmingCharacters(in: .whitespaces)
         if (stopTitle == "") {
-            TripsViewController().alertNotifyUser(message: "Document not saved.\nA name is required.")
+            TripsViewController().alertNotifyUser(message: "Stop not saved.\nA name is required.")
             return
         }
         let stopCap = stopCaption.text ?? ""
@@ -170,10 +203,10 @@ class AddStopsViewController: UIViewController, UIImagePickerControllerDelegate 
                 let managedContext = stop.managedObjectContext
                 try managedContext?.save()
             } catch {
-                TripsViewController().alertNotifyUser(message: "Document not saved.\nAn error occured saving context.")
+                TripsViewController().alertNotifyUser(message: "Stop not saved.\nAn error occured saving context.")
             }
         } else {
-            TripsViewController().alertNotifyUser(message: "Document not saved.\nA Document entity could not be created.")
+            TripsViewController().alertNotifyUser(message: "Stop not saved.\nA Stop entity could not be created.")
         }
         
         navigationController?.popViewController(animated: true)

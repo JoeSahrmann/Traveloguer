@@ -185,6 +185,36 @@ class StopsViewController: UIViewController, UITableViewDelegate, UITableViewDat
        // cell.backgroundView
         return cell
     }
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") {
+            action, index in
+            self.deleteStop(at: indexPath)
+        }
+        
+        return [delete]
+    }
+    func deleteStop(at indexPath: IndexPath) {
+        let stop = stopz[indexPath.row]
+        
+        if let managedObjectContext = stop.managedObjectContext {
+            managedObjectContext.delete(stop)
+            
+            do {
+                try managedObjectContext.save()
+                self.stopz.remove(at: indexPath.row)
+                stopTV.deleteRows(at: [indexPath], with: .automatic)
+            } catch {
+                alertNotifyUser(message: "Delete failed.")
+                stopTV.reloadData()
+            }
+        }
+    }
+    func alertNotifyUser(message: String) {
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
                 if segue.identifier == "tripCRUD" {
                     if let destination = segue.destination as? StopDetailzViewController{
@@ -192,9 +222,9 @@ class StopsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         destination.tripName = tripz[index].name ?? ""
                         destination.index = index
                     }
-                    if segue.identifier == "stop"{
+                    if segue.identifier == "addStop"{
                         if let destination = segue.destination as? AddStopsViewController{
-//                            destination.trip = trip
+                            destination.trip = trip
                             destination.index = index
                     }
                     

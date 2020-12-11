@@ -362,7 +362,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rx7-rp-1LK">
-                                <rect key="frame" x="0.0" y="88" width="414" height="1478"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="1426"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iaa-0s-dbt">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1600"/>
@@ -515,7 +515,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="skB-vU-PnK">
-                                <rect key="frame" x="20" y="461.5" width="374" height="51.5"/>
+                                <rect key="frame" x="20" y="516" width="374" height="51.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location " textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDI-Fz-1Wb">
                                         <rect key="frame" x="0.0" y="0.0" width="69.5" height="51.5"/>
@@ -537,7 +537,7 @@
                                 <color key="backgroundColor" name="background"/>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LPs-RI-10y">
-                                <rect key="frame" x="20" y="170" width="374" height="161.5"/>
+                                <rect key="frame" x="20" y="170" width="374" height="216"/>
                                 <color key="backgroundColor" name="text"/>
                                 <color key="tintColor" name="text"/>
                                 <constraints>
@@ -545,7 +545,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SDm-2k-qZA">
-                                <rect key="frame" x="20" y="351.5" width="374" height="61.5"/>
+                                <rect key="frame" x="20" y="406" width="374" height="61.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haJ-zc-ais">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="41"/>
@@ -631,7 +631,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VBS-vZ-ih5"/>
+        <segue reference="8gg-1w-J3G"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="ellipsis" catalog="system" width="128" height="37"/>
@@ -641,7 +641,7 @@
             <color red="0.6940000057220459" green="0.96100002527236938" blue="0.98400002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="text">
-            <color red="0.12999999523162842" green="0.12999999523162842" blue="0.12999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.1289999932050705" green="0.1289999932050705" blue="0.1289999932050705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
