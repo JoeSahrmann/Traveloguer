@@ -277,10 +277,8 @@
                                                         <accessibility key="accessibilityConfiguration" identifier="tripCell"/>
                                                         <connections>
                                                             <outlet property="date" destination="dCT-P4-tMH" id="P50-Bb-LOH"/>
-                                                            <outlet property="favPic" destination="9iC-Pf-v1i" id="qAs-e0-JLf"/>
                                                             <outlet property="stopPic" destination="9iC-Pf-v1i" id="3FS-8P-REm"/>
                                                             <outlet property="stopTitle" destination="BhQ-T6-cIx" id="Uxg-dC-XkX"/>
-                                                            <outlet property="tripTitle" destination="BhQ-T6-cIx" id="rLa-lP-aYX"/>
                                                             <segue destination="604-Zq-6hl" kind="show" identifier="stop" id="VBS-vZ-ih5"/>
                                                         </connections>
                                                     </tableViewCell>

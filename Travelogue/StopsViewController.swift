@@ -125,11 +125,15 @@ class StopsViewController: UIViewController, UITableViewDelegate, UITableViewDat
             // document doesn't exist, create new one
             if let trip = trip {
                 stop = Stop(title: title, date: date, caption: cap, pic: pic, trip: trip)
+            }else{
+                print("failed")
             }
         } else {
             // document exists, update existing one
             if let trip = trip {
                 stop?.update(title: title, date: date, caption: cap, pic: pic, trip: trip)
+            }else{
+                print("failed2")
             }
         }
 
@@ -138,10 +142,10 @@ class StopsViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 let managedContext = stop.managedObjectContext
                 try managedContext?.save()
             } catch {
-//                TripsViewController().alertNotifyUser(message: "Document not saved.\nAn error occured saving context.")
+                TripsViewController().alertNotifyUser(message: "Stop not saved.\nAn error occured saving context.")
             }
         } else {
-//            TripsViewController().alertNotifyUser(message: "Document not saved.\nA Document entity could not be created.")
+            TripsViewController().alertNotifyUser(message: "Stop not saved.\nA Document entity could not be created.")
         }
         
         navigationController?.popToRootViewController(animated: true)
@@ -157,6 +161,7 @@ class StopsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stopz.count
+//        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -167,22 +172,23 @@ class StopsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if let cell = cell as? StopTableViewCell {
             let stop = stopz[indexPath.row] 
             cell.stopTitle.text = stop.title
+//            cell.stopTitle.text = "joe"
             cell.stopPic.layer.cornerRadius = 10.0;
             cell.stopTitle.UILableTextShadow(color: UIColor.black)
-            let arr = Trip.shareInstance.fetchImage()
-            cell.stopPic.image = UIImage(data: arr[indexPath.row].coverPhoto!)
+            let arr = Stop.shareInstance.fetchImage()
+//            cell.stopPic.image = UIImage();
+            cell.stopPic.image = UIImage(data: arr[indexPath.row].pic!)
             if let modifiedDate = stop.date {
                 cell.date.text = dateFormatter.string(from: modifiedDate)
             } else {
                 cell.date.text = "unknown"
             }
+//            cell.date.text = "joe sate"
+            cell.date.layer.masksToBounds = true
             cell.stopTitle.layer.masksToBounds = true
             cell.stopPic.layer.masksToBounds = true
         }
-        //style me please
-//        cell.contentView.backgroundColor=mint
-//        cell.contentView.tintColor=mintText
-       // cell.backgroundView
+
         return cell
     }
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {

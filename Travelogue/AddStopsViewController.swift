@@ -106,6 +106,7 @@ class AddStopsViewController: UIViewController, UIImagePickerControllerDelegate 
        }
 
     @IBAction func saveStop(_ sender: Any) {
+//        TripsViewController().alertNotifyUser(message: "first thing first")
         guard let name = stoptitleTF.text else {
             TripsViewController().alertNotifyUser(message: "Stop not saved.\nThe name is not accessible.")
             return
